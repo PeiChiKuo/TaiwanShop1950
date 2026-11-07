@@ -1,0 +1,6 @@
+{
+  "name": "大稻埕雜貨店 - Dadaocheng Grocery Store",
+  "description": "1950年代台灣白色恐怖時期大稻埕雜貨店空間解謎與避難遊戲。推移貨櫃規劃購物與秘密逃亡動線，躲避街道巡邏警察視線。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

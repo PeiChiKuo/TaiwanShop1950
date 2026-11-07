@@ -1,0 +1,133 @@
+import { GroceryItem, DayConfig } from '../types/game';
+
+export const GROCERY_ITEMS: Record<string, GroceryItem> = {
+  soap: {
+    id: 'soap',
+    name: '明星香水皂',
+    category: 'REGULAR',
+    price: 3,
+    icon: '🧼',
+    description: '1950年代家喻戶曉之綠盒花香肥皂，洗滌衣物與芬芳必備。',
+    tag: '日用百貨',
+  },
+  soda: {
+    id: 'soda',
+    name: '黑松芭樂汽水',
+    category: 'REGULAR',
+    price: 2,
+    icon: '🍾',
+    description: '深綠玻璃瓶裝、鐵皇冠蓋，小鎮孩童最奢華的甜美回憶。',
+    tag: '清涼冷飲',
+  },
+  match: {
+    id: 'match',
+    name: '猴標火柴盒',
+    category: 'REGULAR',
+    price: 1,
+    icon: '🔥',
+    description: '紅色木片火柴，生火煮飯、點燃煤油燈之民生必需品。',
+    tag: '日用民生',
+  },
+  can: {
+    id: 'can',
+    name: '冬筍排骨罐頭',
+    category: 'REGULAR',
+    price: 5,
+    icon: '🥫',
+    description: '馬口鐵精緻罐裝，逢年過節過探親才有機會享用之珍品。',
+    tag: '乾貨罐頭',
+  },
+  flour: {
+    id: 'flour',
+    name: '美援雙手麵粉袋',
+    category: 'REGULAR',
+    price: 8,
+    icon: '🌾',
+    description: '印有中美合作握手標誌之純棉布袋，袋子常改縫為孩童短褲。',
+    tag: '民生主食',
+  },
+  candy: {
+    id: 'candy',
+    name: '柑仔店金幣糖',
+    category: 'REGULAR',
+    price: 1,
+    icon: '🍬',
+    description: '大玻璃甕裡的甘草糖與紅心金幣糖，一元可以買五顆。',
+    tag: '懷舊零嘴',
+  },
+  banned_book: {
+    id: 'banned_book',
+    name: '《自由中國》文存',
+    category: 'CONTRABAND',
+    price: 20,
+    icon: '📕',
+    description: '談論民主憲政之敏感刊物，封面以牛皮紙偽裝，嚴禁公開流傳。',
+    tag: '管制違禁品',
+  },
+  leaflet: {
+    id: 'leaflet',
+    name: '地下手抄油印傳單',
+    category: 'CONTRABAND',
+    price: 10,
+    icon: '📜',
+    description: '青年學生在暗房刻鋼板油印之抗議傳單，記錄著被抹去的名字。',
+    tag: '管制文宣',
+  },
+  manuscript: {
+    id: 'manuscript',
+    name: '哲學思潮手抄筆記',
+    category: 'CONTRABAND',
+    price: 15,
+    icon: '📓',
+    description: '手抄唯物哲學與社會思潮筆記，一旦查獲恐遭重判感訓。',
+    tag: '管制思想品',
+  },
+  radio_part: {
+    id: 'radio_part',
+    name: '短波收音機真空管',
+    category: 'CONTRABAND',
+    price: 30,
+    icon: '📻',
+    description: '用於秘密接收海外短波電台之高頻真空管，嚴格配額列管。',
+    tag: '涉密器材',
+  },
+};
+
+export const DAY_CONFIGS: DayConfig[] = [
+  {
+    day: 1,
+    yearTitle: '1954 台北城南',
+    subTitle: '平安柑仔店‧暗巷初生',
+    durationSeconds: 120, // 2 minutes
+    policeSpeed: 1.0,
+    policePeekFrequency: 18, // seconds between inspection sweeps
+    contrabandChance: 0.35,
+    shelterChance: 0.25,
+    historicalContext:
+      '民國四十年代初，台北巷弄間戒備日嚴。表面上您是這間充滿醬油與明星香水皂香氣的柑仔店掌櫃，暗中則利用動態機關貨架掩護進步青年與地下讀書會成員。',
+  },
+  {
+    day: 2,
+    yearTitle: '1957 戒嚴深秋',
+    subTitle: '夜半哨音‧密道疾轉',
+    durationSeconds: 150,
+    policeSpeed: 1.35,
+    policePeekFrequency: 13,
+    contrabandChance: 0.5,
+    shelterChance: 0.45,
+    historicalContext:
+      '警總特務與憲兵加強了夜間巡邏。幾位台大與師院的青年學生被追蹤至附近暗巷，他們急需您開啟旋轉書櫃後的地下密道！注意窗外憲兵手電筒的死角。',
+  },
+  {
+    day: 3,
+    yearTitle: '1960 雷震風暴',
+    subTitle: '白色風暴前夕‧生死方寸',
+    durationSeconds: 180,
+    policeSpeed: 1.7,
+    policePeekFrequency: 9,
+    contrabandChance: 0.65,
+    shelterChance: 0.6,
+    historicalContext:
+      '《自由中國》籌組新黨風聲鶴唳，特務隨時可能踢門突擊搜查。你必須眼明手快：滑動大貨架封堵店門視線、翻轉暗格偽裝成排骨罐頭，並將最後一批文宣護送入地底！',
+  },
+];
